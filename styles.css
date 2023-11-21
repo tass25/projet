@@ -1,13 +1,21 @@
 body {
     margin: 0;
-}
-
-.background-img {
     background-image: url('background-img.jpg');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
     text-align: center;
-    color: #4f1616; 
+    
+}
+.font{
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+    font-size: 80px;
+    color: rgb(212, 186, 249);
+    font-weight: 10;
+    transition: 1s;
+    margin-top: 100px;
+}
+.font:hover{
+   -webkit-text-stroke: 1px rgb(214, 201, 245); 
+   color: transparent;
 }
