@@ -1,61 +1,97 @@
-body {
-    background-image: url('3653960.jpg');
-    background-size:auto;
-    background-repeat: no-repeat;
-    background-position: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;300;400;500;600&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+outline: none;
+border:none;
+text-decoration: none;
+text-transform: capitalize;
+transition: all .2s linear;
+} 
+
+:root {
+  --blue: #29d9d5;
+  --black:#000000;
+  --white:#fff;
+  --light-color:#aaa;
+  --bg-color:#222;
+  --black-bg:rgba(17,17,17,.7);
+  --border:.2rem solid var(--blue);
+}
+html{
+  font-size: 62.5%;
+  overflow-x:hidden ;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+  &::-webkit-scrollbar{
+    width: 1rem;
   }
-  
-  .font {
-    font-family: 'Brush Script MT', cursive;
-    text-align: center;
-    font-size: 80px;
-    color: rgb(212, 186, 249);
-    font-weight: 10;
-    transition: 1s;
-    margin-top: 180px;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  &::-webkit-scrollbar-track{
+    background: var(--black);
   }
-  
-  .font:hover {
-    -webkit-text-stroke: 1px rgb(190, 162, 255);
-    color: transparent;
+  &::-webkit-scrollbar-thumb{
+    background: var(--blue);
   }
-  
-  .button-33-right {
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 0;
+
+}
+
+body{
+  background: var(--bg-color);
+  overflow-x: hidden;
+
+}
+.header{
+position: fixed;
+top:0;
+left: 0;
+right: 0;
+z-index: 1000;
+background: var(--black);
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1.5rem 9% ;
+
+.navbar a{
+  font-size: 1.7rem;
+  color: var(--light-color);
+  display: inline-block;
+
+  margin:0 1rem;
+  &:hover {
+    color: var(--blue);
   }
-  
-  .button-33 {
-    margin-top: 20px;
-    margin-right: 70px;
-    display: inline-block;
-    color: #ffffff;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    border-radius: 80px;
-    padding: 5px 20px;
-    text-align: center;
-    transition: ease .40s;
-    text-decoration: none;
-  }
-  
-  .button-33:hover {
-    transform: scale(1.1);
-    text-decoration: none;
-    background: linear-gradient(to bottom, rgba(208, 124, 221, 0.5), rgba(240, 204, 255, 0.5));
-    cursor: pointer;
-  }
-  
-  .p {
-    margin-top: 360px;
-    margin-left: 450px;
-    color: rgb(255, 209, 209);
-    font-family:kalam;
-  }
-  
+}
+
+
+
+}
+.logo{
+  width: 90px ;
+  height: 50px;
+  margin-left: -130px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
