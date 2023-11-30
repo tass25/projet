@@ -42,9 +42,28 @@ body{
   overflow-x: hidden;
 
 }
+
+.btn{
+margin-top: 1rem;
+display: inline-block;
+padding: 1rem 3rem;
+font-size: 1.7rem;
+color:var(--blue);
+border:var(--border);
+border-radius: 5rem;
+cursor: pointer;
+background: none;
+&:hover{
+  background: var(--blue);
+color: var(--black);}
+.btn{
+  margin-top: -30px;
+}
+}
+
 .header{
 position: fixed;
-top:0;
+top:-10px;
 left: 0;
 right: 0;
 z-index: 1000;
@@ -55,7 +74,7 @@ justify-content: space-between;
 padding: 1.5rem 9% ;
 
 .navbar a{
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   color: var(--light-color);
   display: inline-block;
 
@@ -64,16 +83,19 @@ padding: 1.5rem 9% ;
     color: var(--blue);
   }
 }
-
-
-
 }
 .logo{
-  width: 90px ;
+  margin-top: -5px;
+  width: 70px ;
   height: 50px;
-  margin-left: -130px;
+  margin-left: -100px;
 }
+#menu-btn{
+font-size: 2.5rem;
+color: var(--white);
+cursor: pointer;
 
+}
 
 
 
