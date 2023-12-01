@@ -93,8 +93,49 @@ padding: 1.5rem 9% ;
 #menu-btn{
 font-size: 2.5rem;
 color: var(--white);
+cursor: pointer;
+display: none;
+}
+
+/* bch ki nsaghro twali mzyena w tben aka 3 choltat */
+@media (max-width:991px)
+{#menu-btn{
+  display: inline-block ;
+  }
+  html{font-size: 55%;}
+.header{
+  padding: 1.5rem 2rem;
+}
+}
+/*ki tsghar */
+@media (max-width:768px){.header{
+  .navbar{position: absolute;
+  top: 99%; left:0;right: 0;
+    background: var(--black);
+background: var(--bg-color);
+a {margin: 2rem;
+font-size: 2rem;
+display: block;}
+
+
+
 
 }
+}
+
+}
+
+@media (max-width:450px)
+{html{font-size: 50%;}
+
+}
+
+
+
+
+
+
+
 
 
 
