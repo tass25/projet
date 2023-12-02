@@ -240,7 +240,7 @@ h3{
   text-transform: none;
   background: none;
   margin-top: 1rem;
-  
+
 
 
 }
@@ -248,7 +248,22 @@ h3{
 .booking .btn {
   flex: 1 1 15rem;
 }
-
+.about{
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap:2rem;
+}
+.about .video-container{
+  flex:1 1 42rem;
+}
+.about .video-container video{
+  border-radius: 1rem;
+  width: 100%;
+}
+.about .content{
+  flex:1 1 42rem;
+}
 
 
 
