@@ -1,134 +1,210 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;300;400;500;600&display=swap');
-*{
+
+* {
   font-family: 'Poppins', sans-serif;
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-outline: none;
-border:none;
-text-decoration: none;
-text-transform: capitalize;
-transition: all .2s linear;
-} 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
 
 :root {
   --blue: #29d9d5;
-  --black:#000000;
-  --white:#fff;
-  --light-color:#aaa;
-  --bg-color:#222;
-  --black-bg:rgba(17,17,17,.7);
-  --border:.2rem solid var(--blue);
+  --black: #000000;
+  --white: #fff;
+  --light-color: #aaa;
+  --bg-color: #222;
+  --black-bg: rgba(17, 17, 17, .7);
+  --border: .2rem solid var(--blue);
 }
-html{
+
+html {
   font-size: 62.5%;
-  overflow-x:hidden ;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 9rem;
-  &::-webkit-scrollbar{
-    width: 1rem;
-  }
-  &::-webkit-scrollbar-track{
-    background: var(--black);
-  }
-  &::-webkit-scrollbar-thumb{
-    background: var(--blue);
-  }
-
 }
 
-body{
-  background: var(--bg-color);
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--white);
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+body {
+  background: var(--black);
   overflow-x: hidden;
-
 }
 
-.btn{
-margin-top: 1rem;
-display: inline-block;
-padding: 1rem 3rem;
-font-size: 1.7rem;
-color:var(--blue);
-border:var(--border);
-border-radius: 5rem;
-cursor: pointer;
-background: none;
-&:hover{
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: var(--blue);
+  border: var(--border);
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+}
+
+.btn:hover {
   background: var(--blue);
-color: var(--black);}
-.btn{
-  margin-top: -30px;
-}
+  color: var(--black);
 }
 
-.header{
-position: fixed;
-top:-10px;
-left: 0;
-right: 0;
-z-index: 1000;
-background: var(--black);
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 1.5rem 9% ;
+.header {
+  position: fixed;
+  top: -10px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+}
 
-.navbar a{
+.header .navbar a {
   font-size: 1.8rem;
   color: var(--light-color);
-  display: inline-block;
+  margin: 0 1rem;
+}
 
-  margin:0 1rem;
-  &:hover {
-    color: var(--blue);
-  }
+.header .navbar a:hover {
+  color: var(--blue);
 }
-}
-.logo{
+
+.logo {
   margin-top: -5px;
-  width: 70px ;
+  width: 70px;
   height: 50px;
   margin-left: -100px;
 }
-#menu-btn{
-font-size: 2.5rem;
-color: var(--white);
-cursor: pointer;
-display: none;
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: var(--white);
+  cursor: pointer;
+  display: none;
 }
 
-/* bch ki nsaghro twali mzyena w tben aka 3 choltat */
-@media (max-width:991px)
-{#menu-btn{
-  display: inline-block ;
+.home {
+  margin: 0 auto;
+  margin-top: 8rem;
+  width: 90%;
+  border-radius: 1rem;
+  background: linear-gradient(var(--black-bg), var(--black-bg)), url('pic1.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5rem;
+
+}
+
+.home .content {
+  text-align: center;
+}
+
+.home .content span {
+  font-weight: bolder;
+  color: transparent;
+  -webkit-text-stroke: .1rem var(--white);
+  font-size: 4vw;
+  display: block;
+
+}
+
+.home .content h3 {
+  font-size: 6vw;
+  color: var(--white);
+}
+
+.home .content p {
+  max-width: 60rem;
+  margin: 1rem;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 2;
+}
+
+@media (max-width: 991px) {
+  #menu-btn {
+    display: inline-block;
   }
-  html{font-size: 55%;}
-.header{
-  padding: 1.5rem 2rem;
-}
-}
-/*ki tsghar */
-@media (max-width:768px){.header{
-  .navbar{position: absolute;
-  top: 99%; left:0;right: 0;
-    background: var(--black);
-background: var(--bg-color);
-a {margin: 2rem;
-font-size: 2rem;
-display: block;}
 
+  html {
+    font-size: 55%;
+  }
 
+  .header {
+    padding: 1.5rem 2rem;
+  }
 
-
-}
+  section {
+    padding: 3rem 2rem;
+  }
 }
 
+@media (max-width: 768px) {
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: var(--bg-color);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .header .navbar a {
+    margin: 2rem;
+    font-size: 2rem;
+    display: block;
+  }
+
+.home{
+  margin-top: 10rem;
+}
+.home.content{
+  span{
+    font-size:8vw ;
+      }
+
+h3{
+  font-size:8vw ;
+    }
+
+}
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
 }
 
-@media (max-width:450px)
-{html{font-size: 50%;}
 
-}
 
 
 
