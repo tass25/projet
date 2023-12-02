@@ -109,7 +109,7 @@ body {
   margin-top: 8rem;
   width: 90%;
   border-radius: 1rem;
-  background: linear-gradient(var(--black-bg), var(--black-bg)), url('pic1.jpg') no-repeat;
+  background: linear-gradient(var(--black-bg), var(--black-bg)), url("img\pic1.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -140,7 +140,7 @@ body {
 
 .home .content p {
   max-width: 60rem;
-  margin: 1rem;
+  margin: 1rem auto ;
   font-size: 1.4rem;
   color: var(--light-color);
   line-height: 2;
@@ -253,6 +253,7 @@ display: flex;
 align-items: center;
 flex-wrap: wrap;
 gap:2rem;
+margin-top: 5rem;
 }
 .about .video-container{
   flex:1 1 42rem;
@@ -261,10 +262,46 @@ gap:2rem;
   border-radius: 1rem;
   width: 100%;
 }
-.about .content{
-  flex:1 1 42rem;
+.about .video-container .controls {
+  text-align: center;
+  padding: 2rem 0;
 }
 
+.about .video-container .controls span {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: var(--white);
+  cursor: pointer;
+  margin: 0.7rem;
+}
+
+.about .video-container .controls span:hover {
+  background: var(--blue);
+}
+
+
+.about .content{
+  flex:1 1 42rem;
+  margin-bottom: 5rem;}
+  .about .content span {
+  color:var(--blue);
+  font-size: 2rem;
+}
+
+.about .content h3 {
+  color:var(--white);
+  font-size: 4rem;
+  margin-top: 2rem;
+
+}
+.about .content p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 2;
+}
 
 
 
