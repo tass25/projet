@@ -20,6 +20,7 @@
   --bg-color: #222;
   --black-bg: rgba(17, 17, 17, .7);
   --border: .2rem solid var(--blue);
+
 }
 
 html {
@@ -145,6 +146,38 @@ body {
   color: var(--light-color);
   line-height: 2;
 }
+
+.destination .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 1.5rem;
+
+}
+.destination .box-container .box{
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--bg-color);
+}
+.destination .box-container .box:hover img {
+    transform: scale(1.1);
+  }
+.destination .box-container .box .image {
+  height: 20rem;
+  overflow: hidden;
+  width:100%;
+  
+}
+.destination .box-container .box .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+
 
 @media (max-width: 991px) {
   #menu-btn {
@@ -320,8 +353,6 @@ margin-top: 5rem;
   font-size: 4rem;
   color: var(--white);
 }
-
-
 
 
 
