@@ -109,7 +109,7 @@ body {
   margin-top: 8rem;
   width: 90%;
   border-radius: 1rem;
-  background: linear-gradient(var(--black-bg), var(--black-bg)), url("img\pic1.jpg") no-repeat;
+  background: linear-gradient(var(--black-bg), var(--black-bg)), url("img/pic1.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -201,6 +201,9 @@ h3{
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .about .content h3 {
+    font-size: 3.5rem;
   }
 }
 
