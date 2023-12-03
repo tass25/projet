@@ -174,8 +174,35 @@ body {
   display: block;
 }
 
+.destination .box-container .box .content {
+  padding: 2rem;
+  text-align: center;
+}
 
+.destination .box-container .box .content h3 {
+  font-size: 2rem;
+  color: var(--white);
+}
 
+.destination .box-container .box .content p {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 2;
+}
+
+.destination .box-container .box .content a {
+  font-size: 1.7rem;
+  color: var(--blue);
+}
+
+.destination .box-container .box .content a:hover i {
+  padding-left: 1rem;
+}
+
+.destination .box-container .box .content i {
+  padding-right: 0.5rem;
+}
 
 
 
