@@ -385,6 +385,25 @@ margin-top: 5rem;
 /* hne youfa e css mtaa destination w about us w home w ll screen ki tosghr */
 /* so hne yabde service */
 
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  }
+  
+  .services .box {
+    background: var(--bg-color);
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .services .box i {
+    font-size: 54em;
+    color: var(--blue);
+    margin-bottom: 1rem;
+  }
+  
+
 
 
 
