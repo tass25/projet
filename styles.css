@@ -386,7 +386,7 @@ margin-top: 5rem;
 /* so hne yabde service */
 
 .services .box-container {
-@unclude grid(32rem)
+@include grid(32rem)
 .box{
   background:var(--bg-color)
   border-radius:1rem;
