@@ -6,12 +6,26 @@
     <meta name="viewport" content="width=device-width,intial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Campy Website</title>
-    <script src="script.js" defer></script>
-
+    <title>Campy</title>
   </head>
 <body>
-
+  <div id="login-popup" class="popup-container">
+    <div class="popup-content" id="login-form-popup">
+      <h2>Login</h2>
+      <form>
+        <label for="email" class="email-label">Email:</label>
+        <input type="email" id="email" name="email" required>
+      <br>
+        <label for="password" class="password-label">Password:</label>
+        <input type="password" id="password" name="password" required>
+      
+        <button type="submit">Login</button>
+      </form>
+      
+      <p>Don't have an account? <a href="register.html">Register here.</a></p>
+      <span class="close-btn" id="close-popup">&times;</span> 
+    </div>
+  </div>
 <header class="header">
   <div id="menu-btn" class="fas fa-bars"></div>
   <img src="img/logo.png" alt="Logo" class="logo">
@@ -22,22 +36,17 @@
   <a href="#services"> services</a>
   <a href="#gallery"> gallery </a>
   <a href="#blogs"> blogs</a>
-</nav>
-<a href="#book-form" class="btn"> book now</a>
+  </nav>
+  <a id="login-btn1" href="#book-form" class="btn">Login</a>
 </header>
-
-
 <!-- e rasmi -->
-
 <section class="home" id="home">
   <div class="content">
   <span>follow us</span>
   <h3>to the unknown</h3>
   <p>Journey beyond the horizon, where dreams set sail and adventures await.</p>
-  <a href="#" class="btn">book now</a>
-
+  <a href="#booking" class="btn">book now</a>
   </div>
-
 </section>
 <!--section wfet w section form bch tabde -->
 <section class="booking" id="booking">
@@ -46,12 +55,10 @@
 <span> Where to ? </span>
 <input type="text" placeholder="place name" value="">
 </div>
-
 <div class="inputBox">
   <span> When ? </span>
   <input type="date" value="">
   </div>
-
   <div class="inputBox">
     <span> How many ? </span>
     <input type="number" placeholder="number of persons" value="">
@@ -59,9 +66,7 @@
 <input type="submit" value="Find now" class="btn">
 </form>
 </section>
-
-<!--section form wfet w section about us  bch tabde -->
-
+<!--section form wfet w section about us bch tabde -->
 <section class="about" id="about">
 <div class="video-container">
 <video src="vd/night_sky_-_31569 (540p).mp4" muted autoplay loop class="video"></video>
@@ -71,7 +76,6 @@
   <span class="control-btn" data-src="vd/vd3.mp4"></span>
   <span class="control-btn" data-src="vd/vd4.mp4"></span>
   <span class="control-btn" data-src="vd/vd2.mp4"></span>
-
 </div>
 </div>
 <div class="content">
@@ -95,9 +99,10 @@
     <div class="content">
     <h3>Bizerte</h3>
     <p>Sun, Sand, Sea, Serenity.</p>
-    <a href="#">read more <i class="fas fa-angle-right"></i></a>
+    <a href="https://www.tripadvisor.fr/Tourism-g480249-Bizerte_Bizerte_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
   </div>
   </div>
+
   <div class="box">
     <div class="image"> 
      <img src="img/i2.png" alt=""> 
@@ -105,9 +110,10 @@
    <div class="content">
    <h3>Douz</h3>
    <p>Sahara's Endless Dunes.</p>
-   <a href="#">read more <i class="fas fa-angle-right"></i></a>
+   <a href="https://www.tripadvisor.fr/Tourism-g477972-Douz_Kebili_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
  </div>
  </div>
+
  <div class="box">
   <div class="image"> 
    <img src="img/i3.png" alt=""> 
@@ -115,18 +121,18 @@
  <div class="content">
  <h3>Gabes</h3>
  <p>Coastal Oasis Tranquility.</p>
- <a href="#">read more <i class="fas fa-angle-right"></i></a>
+ <a href="https://www.tripadvisor.fr/Attractions-g2629138-Activities-Gabes_Governorate.html">read more <i class="fas fa-angle-right"></i></a>
 </div>
 </div>
 
 <div class="box">
   <div class="image"> 
-   <img src="img/i4.png" alt=""> 
+   <img src="img/djerba.jpg" alt=""> 
  </div>
  <div class="content">
- <h3>Sahara</h3>
- <p>Sahara's Mystical Beauty.</p>
- <a href="#">read more <i class="fas fa-angle-right"></i></a>
+ <h3>Djerba</h3>
+ <p>Djerba's Mystical Beauty.</p>
+ <a href="https://www.tripadvisor.fr/Tourism-g297941-Djerba_Island_Medenine_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
 </div>
 </div>
 
@@ -137,7 +143,7 @@
  <div class="content">
  <h3>Béja</h3>
  <p> Reservoir Serenity Scene.</p>
- <a href="#">read more <i class="fas fa-angle-right"></i></a>
+ <a href="https://www.tripadvisor.fr/Attractions-g2629135-Activities-Beja_Governorate.html">read more <i class="fas fa-angle-right"></i></a>
 </div>
 </div>
 
@@ -148,7 +154,7 @@
  <div class="content">
  <h3>Jendouba</h3>
  <p>Green Hills Embrace</p>
- <a href="#">read more <i class="fas fa-angle-right"></i></a>
+ <a href="https://www.tripadvisor.fr/Tourism-g953410-Jendouba_Jendouba_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
 </div>
 </div>
 
@@ -159,7 +165,7 @@
  <div class="content">
  <h3>Nabeul</h3>
  <p>Turquoise Bliss Beaches</p>
- <a href="#">read more <i class="fas fa-angle-right"></i></a>
+ <a href="https://www.tripadvisor.fr/Tourism-g317086-Nabeul_Nabeul_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
 </div>
 </div>
 
@@ -170,7 +176,7 @@
  <div class="content">
  <h3>Tozeur</h3>
  <p>Star Wars Sands.</p>
- <a href="#">read more <i class="fas fa-angle-right"></i></a>
+ <a href="https://www.tripadvisor.fr/Tourism-g293757-Tozeur_Tozeur_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
 </div>
 </div>
   </div>
@@ -178,64 +184,6 @@
 <!--section services bch tabde tw -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script src="script.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-<!-- var pointé n'acedeleha b : *pointeur     
-    
-    
-    !-->
