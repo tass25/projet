@@ -4,7 +4,7 @@
     <title>Campy</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="register-login.css">   
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=0LEN09Oafmn_1wo_VzJ3QYnagbhO1Sq1RL9L2su7XG83XWRUKHQ8FBhm15SfKwdnv6N_dsVw16wZWb4t6Et6QKbEA_DZ2xAKBFCpOWYH3PCV4OXnMDWDse-adcZcigeQBWnBBbI-OrLctse2GMfiY-6_aSz50gnvkWlAMpBhZWT0inNMK8nzBSYLMG8TmB8ITDu1vL1imR4XKvfcgacH4AstlYDGBDRhb_AJqjAz99ny5kiPQn5Ngi3VcsgiFTvRMvd5APi6jSSaR2hK0yQiqVTd3GqoWsV7ZjhqzB13Od0WaE4JIWfBZ_MmcdeBOJxYDKxth8HR28al1xeFCdf4sn4eRCcH6cisd0sdsKsvKuU" charset="UTF-8"></script></head>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=F58Bfe162TBk4pw0049VphbzokS8i34viZCAPjd__9Y63r1MoCcEfO0CIlWcFABaWc14Bkcd8O-BZvnPsLQurH2BNCTS7giLjFpUxCjofgmq4_fB9J4M7qLzfhVo2p3x0bKwBMXCVGPt4YNHNDCJ_VBKmMwCqpOFKYUWMs3MvEPEkE_VBAhRZVC7fCLIibwySnzwc3IPd-tizzzrx_coBY1aDlQLVhPGOfY-U0PsW2d5FZxmRh4HgtRC50LRS44TJuMwyMCGYay5XXE61ANA9nFhHWRShoJIg3CqF7VyZT3p9gdkImEMuNSPjD1mKXB0TvBrnaFU6L8BD7RumtesQaV1t09ex8TnZS3UZBY3zGhC_1ho2emruwsI852AewEP" charset="UTF-8"></script></head>
 <body>
     <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
@@ -19,27 +19,31 @@
         </nav>
         <a href="login.html" class="btn">Login</a>
       </header>
-    <div class="background-image"></div>
+    <div class="background-image-contact"></div>
     <div class="register-container">
-        <h2>Login</h2>
+        <h2>Contact Us</h2>
         <form id="loginForm" class="form-horizontal" action="index.html">
+            <div class="form-group">
+                <label for="email">Name:</label>
+                <input type="text" name="text" placeholder="Name" required>
+            </div>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" name="email" placeholder="Email" required>
             </div>
             <div class="form-group">
-            <label for="register-password" class="password-label">Password:</label>
-            <input type="password" name="password" placeholder="Password" required>
-        </div> 
-
+                <label for="obj">Object:</label>
+                <input type="text" name="text" placeholder="Object" required>
+            </div>
+            <div class="form-group">
+                <label for="msg">Message:</label>
+                <textarea type="text" name="text" placeholder="Write here..." required style="height:200px"></textarea>
+            </div>
             <br>
 
 <div class="button-container">
-    <button id="login-btn" type="submit">Login</button>
+    <button id="login-btn" type="submit">Send</button>
 </div>
-
-<p>Don't have an account? <a href="register.html">Click here!</a></p>
-
         </form>
         <span class="close-btn" id="close-register-popup">&times;</span> 
     </div>

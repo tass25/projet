@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,intial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Campy</title>
-  </head>
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=F58Bfe162TBk4pw0049VpqApbXAglqqLtDLUb-ZrlGeTou0ulhS3RUgrZVMcmg40MDabrTk5FA5iH3IUC6m-dwx9PdCK_dGUjg3siBWfXGktVcrHRVdTjDKeXqcIACNn9frO6ErDu8PpZUDd2YCJnRKtkhW3h-Fu4DijVbA7B7i90-RFpow3y5zYYgGZDL3mZphv1qieo2VCXj_heqKwLfm-QMODVSoDzka11E3I358KUowvQvqNkXWEdpu4AkPhRwHWvhD72QNNf9V1X4w9A7IL6Wv9AWgxsc9_Zoawy-WQoI13fuU1KIj5P_6m7X2sFhecfU-2bCqZyEGBaImgis0ZRFtEZPtO8VHMo1U7CH0" charset="UTF-8"></script></head>
 <body>
   <div id="login-popup" class="popup-container">
     <div class="popup-content" id="login-form-popup">
       <h2>Login</h2>
       <form>
         <label for="email" class="email-label">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
       <br>
         <label for="password" class="password-label">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
       
         <button type="submit">Login</button>
       </form>
@@ -32,10 +32,10 @@
   <nav class="navbar">
   <a href="#home"> home</a>
   <a href="#about"> about us</a>
+  <a href="contactus.html"> contact us</a>
   <a href="#destination">destinations </a>
   <a href="#services"> services</a>
   <a href="#gallery"> gallery </a>
-  <a href="#blogs"> blogs</a>
   </nav>
   <a id="login-btn1" href="#book-form" class="btn">Login</a>
 </header>
@@ -82,7 +82,7 @@
 <span>Why choose us ?</span>
 <h3>Nature's Majesty Awaits You</h3>
 <p>Trade daily stress for nature's serenity. Choose us for a blissful escape into the beauty of the great outdoors .</p>
-<a href="#" class="btn"> read more </a>
+<a href="#services" class="btn"> read more </a>
 </div>
 </section>
 <!--section jdida w dmou3 jdod -->
@@ -183,54 +183,98 @@
   </div>
 </section>
 <!--section services bch tabde tw -->
+<section class="services" id="services">
+  <div class="heading">
+    <span>Our Services</span>
+    <h1>Countless experiences</h1>
+  </div>
+  <div class="box-container">
+    <div class="box">
+      <i class="fas fa-globe"></i>
+      <h3>Worldwide</h3>
+      <p>Explore destinations around the world and embark on global adventures with our diverse travel experiences.</p>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-hiking"></i>
+      <h3>Adventures</h3>
+      <p>Embark on thrilling adventures and discover the beauty of nature with our exciting outdoor activities and expeditions.</p>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-utensils"></i>
+      <h3>Food & Drinks</h3>
+      <p>Savor delicious cuisines and delightful drinks as you indulge in the culinary wonders of our carefully curated food experiences.</p>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-hotel"></i>
+      <h3>Affordable Hotels</h3>
+      <p>Enjoy comfortable stays without breaking the bank with our selection of affordable and quality accommodations.</p>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-wallet"></i>
+      <h3>Affordable Price</h3>
+      <p>Experience the best at a reasonable cost, providing you with unforgettable moments without compromising your budget.</p>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-headset"></i>
+      <h3>24/7 Support</h3>
+      <p>Feel reassured with our round-the-clock customer support, ensuring assistance and guidance whenever you need it.</p>
+    </div>
+  </div>
+</section>
 
 
+<!-- Add this section under your existing sections -->
+<section class="gallery" id="gallery">
 
 
+  <div class="heading">
+    <span>Our Gallery</span>
+    <h1>Explore Our Adventures</h1>
+  </div>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="img/sunset.webp" alt="Gallery Image 1">
+      <p>Amazing Sunset View</p>
+    </div>
+    <div class="gallery-item">
+      <img src="img/hiking.webp" alt="Gallery Image 2">
+      <p>Mountain Hiking Expedition</p>
+    </div>
+    <!-- Add more items as needed -->
+  </div>
+  <div class="heading">
+  </div>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="img/volley.jpg" alt="Gallery Image 1">
+      <p>Playing Volleyball</p>
+    </div>
+    <div class="gallery-item">
+      <img src="img/fish.jpg" alt="Gallery Image 2">
+      <p>Fishing</p>
+    </div>
+    <!-- Add more items as needed -->
+  </div>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="img/horses.webp" alt="Gallery Image 1">
+      <p>Riding horses</p>
+    </div>
+    <div class="gallery-item">
+      <img src="img/kayak.jpg" alt="Gallery Image 2">
+      <p>Kayaking</p>
+    </div>
+    <!-- Add more items as needed -->
+  </div>
+</section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script src="script.js" defer></script>
 
 </body>
 </html>
