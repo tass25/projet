@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Campy</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="register-login.css">   
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=0LEN09Oafmn_1wo_VzJ3QYnagbhO1Sq1RL9L2su7XG83XWRUKHQ8FBhm15SfKwdnv6N_dsVw16wZWb4t6Et6QKbEA_DZ2xAKBFCpOWYH3PCV4OXnMDWDse-adcZcigeQBWnBBbI-OrLctse2GMfiY-6_aSz50gnvkWlAMpBhZWT0inNMK8nzBSYLMG8TmB8ITDu1vL1imR4XKvfcgacH4AstlYDGBDRhb_AJqjAz99ny5kiPQn5Ngi3VcsgiFTvRMvd5APi6jSSaR2hK0yQiqVTd3GqoWsV7ZjhqzB13Od0WaE4JIWfBZ_MmcdeBOJxYDKxth8HR28al1xeFCdf4sn4eRCcH6cisd0sdsKsvKuU" charset="UTF-8"></script></head>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Campy</title>
+    </head>
 <body>
+    <!-- Navbar -->
     <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
         <img src="img/logo.png" alt="Logo" class="logo">
@@ -16,11 +18,14 @@
         <a href="index.html">destinations </a>
         <a href="index.html"> services</a>
         <a href="index.html"> gallery </a>
+        <a href="index.html"> reviews </a>
         </nav>
-        <a href="login.html" class="btn">Login</a>
+        <a id="login-btn1" href="login.html" class="btn">Login</a>
       </header>
+    <!-- Background Image -->
     <div class="background-image"></div>
-    <div class="register-container">
+    <!-- Form -->
+    <div class="login-container">
         <h2>Login</h2>
         <form id="loginForm" class="form-horizontal" action="index.html">
             <div class="form-group">
@@ -28,22 +33,49 @@
                 <input type="email" name="email" placeholder="Email" required>
             </div>
             <div class="form-group">
-            <label for="register-password" class="password-label">Password:</label>
+            <label for="password" class="password-label">Password:</label>
             <input type="password" name="password" placeholder="Password" required>
         </div> 
-
-            <br>
-
-<div class="button-container">
-    <button id="login-btn" type="submit">Login</button>
+        <br>
+        <div class="button-container">
+            <button id="login-btn" type="submit">Login</button>
+        </div>        
+        <p>Don't have an account? <a href="register.html">Click here!</a></p>
+    </form>
+    <span class="close-btn" id="close-login-popup">&times;</span> 
 </div>
-
-<p>Don't have an account? <a href="register.html">Click here!</a></p>
-
-        </form>
-        <span class="close-btn" id="close-register-popup">&times;</span> 
+</div>
+<!-- Footer -->
+<section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <div class="share">
+          <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+          <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+          <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+        </div>
+      </div>
+      <div class="box">
+        <a href="index.html" class="links">Home</a>
+        <a href="index.html" class="links">About Us</a>
+        <a href="contactus.html" class="links">Contact Us</a>
+        <a href="index.html" class="links">Destinations</a>
+        <a href="index.html" class="links">Services</a>
+        <a href="index.html" class="links">Gallery</a>
+        <a href="index.html" class="links">Reviews</a>
+      </div>
+      <div class="box">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map"></i> Ariana, Tunisia</p>
+        <p><i class="fas fa-phone"></i> +216 22 222 222</p>
+        <p><i class="fas fa-envelope"></i> travels@gmail.com</p>
+        <p><i class="fas fa-clock"></i> 7:00am - 10:00pm</p>
+      </div>
     </div>
-</div>
+    <div class="credit">
+      Created by <span>Tesnime, Bochra and Saila</span> | All rights reserved!
+    </div>
+</section>
 <script src="script.js" defer></script>
 </body>
 </html>

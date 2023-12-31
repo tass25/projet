@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,intial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <title>Campy</title>
-  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=F58Bfe162TBk4pw0049VpqApbXAglqqLtDLUb-ZrlGeTou0ulhS3RUgrZVMcmg40MDabrTk5FA5iH3IUC6m-dwx9PdCK_dGUjg3siBWfXGktVcrHRVdTjDKeXqcIACNn9frO6ErDu8PpZUDd2YCJnRKtkhW3h-Fu4DijVbA7B7i90-RFpow3y5zYYgGZDL3mZphv1qieo2VCXj_heqKwLfm-QMODVSoDzka11E3I358KUowvQvqNkXWEdpu4AkPhRwHWvhD72QNNf9V1X4w9A7IL6Wv9AWgxsc9_Zoawy-WQoI13fuU1KIj5P_6m7X2sFhecfU-2bCqZyEGBaImgis0ZRFtEZPtO8VHMo1U7CH0" charset="UTF-8"></script></head>
+  </head>
 <body>
+  <!-- Popup Login -->
   <div id="login-popup" class="popup-container">
     <div class="popup-content" id="login-form-popup">
       <h2>Login</h2>
@@ -18,14 +17,13 @@
       <br>
         <label for="password" class="password-label">Password:</label>
         <input type="password" id="password" name="password" placeholder="Password" required>
-      
         <button type="submit">Login</button>
       </form>
-      
       <p>Don't have an account? <a href="register.html">Register here.</a></p>
       <span class="close-btn" id="close-popup">&times;</span> 
     </div>
   </div>
+<!-- Navbar -->
 <header class="header">
   <div id="menu-btn" class="fas fa-bars"></div>
   <img src="img/logo.png" alt="Logo" class="logo">
@@ -36,10 +34,11 @@
   <a href="#destination">destinations </a>
   <a href="#services"> services</a>
   <a href="#gallery"> gallery </a>
+  <a href="#review"> reviews </a>
   </nav>
   <a id="login-btn1" href="#book-form" class="btn">Login</a>
 </header>
-<!-- e rasmi -->
+<!-- Section Description -->
 <section class="home" id="home">
   <div class="content">
   <span>follow us</span>
@@ -48,7 +47,7 @@
   <a href="#booking" class="btn">book now</a>
   </div>
 </section>
-<!--section wfet w section form bch tabde -->
+<!-- Section Booking -->
 <section class="booking" id="booking">
 <form action="">
 <div class="inputBox">
@@ -58,15 +57,15 @@
 <div class="inputBox">
   <span> When ? </span>
   <input type="date" value="">
-  </div>
-  <div class="inputBox">
-    <span> How many ? </span>
-    <input type="number" placeholder="number of persons" value="">
-    </div>
+</div>
+<div class="inputBox">
+  <span> How many ? </span>
+  <input type="number" placeholder="number of persons" value="">
+</div>
 <input type="submit" value="Find now" class="btn">
 </form>
 </section>
-<!--section form wfet w section about us bch tabde -->
+<!-- Section About Us -->
 <section class="about" id="about">
 <div class="video-container">
 <video src="vd/night_sky_-_31569 (540p).mp4" muted autoplay loop class="video"></video>
@@ -85,7 +84,7 @@
 <a href="#services" class="btn"> read more </a>
 </div>
 </section>
-<!--section jdida w dmou3 jdod -->
+<!-- Section Destinations -->
 <section class="destination" id="destination"> 
 <div class="heading">
 <span> Our Destinations</span>
@@ -93,41 +92,38 @@
 </div>
 <div class="box-container"> 
   <div class="box">
-     <div class="image"> 
-      <img src="img/i1.png" alt=""> 
+    <div class="image"> 
+      <img src="img/i1.png" alt="">     
     </div>
     <div class="content">
-    <h3>Bizerte</h3>
-    <p>Sun, Sand, Sea, Serenity.</p>
-    <a href="https://www.tripadvisor.fr/Tourism-g480249-Bizerte_Bizerte_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
+      <h3>Bizerte</h3>
+      <p>Sun, Sand, Sea, Serenity.</p>
+      <a href="https://www.tripadvisor.fr/Tourism-g480249-Bizerte_Bizerte_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
+    </div>
   </div>
-  </div>
-
   <div class="box">
     <div class="image"> 
-     <img src="img/i2.png" alt=""> 
-   </div>
-   <div class="content">
-   <h3>Douz</h3>
-   <p>Sahara's Endless Dunes.</p>
-   <a href="https://www.tripadvisor.fr/Tourism-g477972-Douz_Kebili_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
- </div>
- </div>
-
- <div class="box">
+    <img src="img/i2.png" alt=""> 
+    </div>
+    <div class="content">
+      <h3>Douz</h3>
+      <p>Sahara's Endless Dunes.</p>
+      <a href="https://www.tripadvisor.fr/Tourism-g477972-Douz_Kebili_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
+    </div>
+  </div>
+  <div class="box">
   <div class="image"> 
    <img src="img/i3.png" alt=""> 
- </div>
- <div class="content">
- <h3>Gabes</h3>
- <p>Coastal Oasis Tranquility.</p>
- <a href="https://www.tripadvisor.fr/Attractions-g2629138-Activities-Gabes_Governorate.html">read more <i class="fas fa-angle-right"></i></a>
-</div>
-</div>
-
+  </div>
+  <div class="content">
+  <h3>Gabes</h3>
+  <p>Coastal Oasis Tranquility.</p>
+  <a href="https://www.tripadvisor.fr/Attractions-g2629138-Activities-Gabes_Governorate.html">read more <i class="fas fa-angle-right"></i></a>
+  </div>
+  </div>
 <div class="box">
   <div class="image"> 
-   <img src="img/djerba.jpg" alt=""> 
+   <img src="img/djerba.png" alt=""> 
  </div>
  <div class="content">
  <h3>Djerba</h3>
@@ -135,19 +131,16 @@
  <a href="https://www.tripadvisor.fr/Tourism-g297941-Djerba_Island_Medenine_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
 </div>
 </div>
-
 <div class="box">
   <div class="image"> 
    <img src="img/pexels-gantas-vaičiulėnas-4484179.jpg" alt=""> 
  </div>
  <div class="content">
-  
  <h3>Béja</h3>
  <p> Reservoir Serenity Scene.</p>
  <a href="https://www.tripadvisor.fr/Attractions-g2629135-Activities-Beja_Governorate.html">read more <i class="fas fa-angle-right"></i></a>
 </div>
 </div>
-
 <div class="box">
   <div class="image"> 
    <img src="img/pexels-ivan-berdasov-1590042.jpg" alt=""> 
@@ -158,7 +151,6 @@
  <a href="https://www.tripadvisor.fr/Tourism-g953410-Jendouba_Jendouba_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
 </div>
 </div>
-
 <div class="box">
   <div class="image"> 
    <img src="img/pexels-kelly-2887294.jpg" alt=""> 
@@ -169,7 +161,6 @@
  <a href="https://www.tripadvisor.fr/Tourism-g317086-Nabeul_Nabeul_Governorate-Vacations.html">read more <i class="fas fa-angle-right"></i></a>
 </div>
 </div>
-
 <div class="box">
   <div class="image"> 
    <img src="img/i10.jpg" alt=""> 
@@ -182,7 +173,7 @@
 </div>
   </div>
 </section>
-<!--section services bch tabde tw -->
+<!-- Section Services -->
 <section class="services" id="services">
   <div class="heading">
     <span>Our Services</span>
@@ -194,31 +185,26 @@
       <h3>Worldwide</h3>
       <p>Explore destinations around the world and embark on global adventures with our diverse travel experiences.</p>
     </div>
-
     <div class="box">
       <i class="fas fa-hiking"></i>
       <h3>Adventures</h3>
       <p>Embark on thrilling adventures and discover the beauty of nature with our exciting outdoor activities and expeditions.</p>
     </div>
-
     <div class="box">
       <i class="fas fa-utensils"></i>
       <h3>Food & Drinks</h3>
       <p>Savor delicious cuisines and delightful drinks as you indulge in the culinary wonders of our carefully curated food experiences.</p>
     </div>
-
     <div class="box">
       <i class="fas fa-hotel"></i>
       <h3>Affordable Hotels</h3>
       <p>Enjoy comfortable stays without breaking the bank with our selection of affordable and quality accommodations.</p>
     </div>
-
     <div class="box">
       <i class="fas fa-wallet"></i>
       <h3>Affordable Price</h3>
       <p>Experience the best at a reasonable cost, providing you with unforgettable moments without compromising your budget.</p>
     </div>
-
     <div class="box">
       <i class="fas fa-headset"></i>
       <h3>24/7 Support</h3>
@@ -226,39 +212,33 @@
     </div>
   </div>
 </section>
-
-
-<!-- Add this section under your existing sections -->
+<!-- Section Gallery -->
 <section class="gallery" id="gallery">
-
-
   <div class="heading">
     <span>Our Gallery</span>
     <h1>Explore Our Adventures</h1>
   </div>
   <div class="gallery-container">
     <div class="gallery-item">
-      <img src="img/b1.gif" alt="Gallery Image 1">
+      <img src="img/ss.jpg" alt="Gallery Image 1">
       <p>Amazing Sunset View</p>
     </div>
     <div class="gallery-item">
-      <img src="img/b2.png" alt="Gallery Image 2">
+      <img src="img/hiking.jpg" alt="Gallery Image 2">
       <p>Mountain Hiking Expedition</p>
     </div>
-    <!-- Add more items as needed -->
   </div>
   <div class="heading">
   </div>
   <div class="gallery-container">
     <div class="gallery-item">
-      <img src="img/b1.gif" alt="Gallery Image 1">
+      <img src="img/volleyball.png" alt="Gallery Image 1">
       <p>Playing Volleyball</p>
     </div>
     <div class="gallery-item">
-      <img src="img/b1.gif" alt="Gallery Image 2">
+      <img src="img/fishing.png" alt="Gallery Image 2">
       <p>Fishing</p>
     </div>
-    <!-- Add more items as needed -->
   </div>
   <div class="gallery-container">
     <div class="gallery-item">
@@ -266,18 +246,85 @@
       <p>Riding horses</p>
     </div>
     <div class="gallery-item">
-      <img src="img/b1.gif" alt="Gallery Image 2">
+      <img src="img/kayak.jpg" alt="Gallery Image 2">
       <p>Kayaking</p>
     </div>
-    <!-- Add more items as needed -->
   </div>
 </section>
-
-
+<!-- Section Reviews -->
+<section class="review" id="review">
+  <div class="content">
+      <span>Testimonials</span>
+      <h3>Good News from Our Clients</h3>
+      <p>
+        Our clients from diverse backgrounds often take the time to share their experiences with us and their opinions, 
+        providing positive feedback about our services. 
+      </p>
+  </div>
+  <div class="box-container">
+      <div class="box">
+          <p>Good work everyone, i had an enjoyable time.</p>
+          <div class="user">
+              <img src="img/j1.jpg" alt="User Photo">
+              <div class="info">
+                  <h3>John Deo</h3>
+                  <span>Designer</span>
+              </div>
+          </div>
+      </div>
+      <div class="box">
+          <p>I highly recommend joining this group!</p>
+          <div class="user">
+              <img src="img/j2.jpg" alt="User Photo">
+              <div class="info">
+                  <h3>Jane Doe</h3>
+                  <span>Architect</span>
+              </div>
+          </div>
+      </div>
+      <div class="box">
+          <p>I was completely impressed with their professionalism and customer service.</p>
+          <div class="user">
+              <img src="img/j3.jpg" alt="User Photo">
+              <div class="info">
+                  <h3>Alex Smith</h3>
+                  <span>Engineer</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Footer -->
+<section class="footer">
+  <div class="box-container">
+    <div class="box">
+      <div class="share">
+        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+      </div>
+    </div>
+    <div class="box">
+      <a href="#home" class="links">Home</a>
+      <a href="#about" class="links">About Us</a>
+      <a href="contactus.html" class="links">Contact Us</a>
+      <a href="#destination" class="links">Destinations</a>
+      <a href="#services" class="links">Services</a>
+      <a href="#gallery" class="links">Gallery</a>
+      <a href="#review" class="links">Reviews</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <p><i class="fas fa-map"></i> Ariana, Tunisia</p>
+      <p><i class="fas fa-phone"></i> +216 22 222 222</p>
+      <p><i class="fas fa-envelope"></i> travels@gmail.com</p>
+      <p><i class="fas fa-clock"></i> 7:00am - 10:00pm</p>
+    </div>
+  </div>
+  <div class="credit">
+    Created by <span>Tesnime, Bochra and Saila</span> | All rights reserved!
+  </div>
+</section>
 <script src="script.js" defer></script>
-
-
-
-
 </body>
 </html>

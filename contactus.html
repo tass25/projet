@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Campy</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="register-login.css">   
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=F58Bfe162TBk4pw0049VphbzokS8i34viZCAPjd__9Y63r1MoCcEfO0CIlWcFABaWc14Bkcd8O-BZvnPsLQurH2BNCTS7giLjFpUxCjofgmq4_fB9J4M7qLzfhVo2p3x0bKwBMXCVGPt4YNHNDCJ_VBKmMwCqpOFKYUWMs3MvEPEkE_VBAhRZVC7fCLIibwySnzwc3IPd-tizzzrx_coBY1aDlQLVhPGOfY-U0PsW2d5FZxmRh4HgtRC50LRS44TJuMwyMCGYay5XXE61ANA9nFhHWRShoJIg3CqF7VyZT3p9gdkImEMuNSPjD1mKXB0TvBrnaFU6L8BD7RumtesQaV1t09ex8TnZS3UZBY3zGhC_1ho2emruwsI852AewEP" charset="UTF-8"></script></head>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Campy</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=mAa_iBX715AuO30VDlqIIHUzo2dFrYhJZ1pxjkLHQsLF1Q5qhKeRpREAEdiPYbvfFn3iQeEG54TZRLRtPXxv2mrp7vfTZzk8YHMZ5vUV9BSAwN4Sj9fFDmEpszBBZGhZKPyKAUVRmHJxSyGKXjni2w_5dXW_Gv8LKfLNhArETxFNM_RxLvTHuoLdN8AzRpzA9Yki9zdWk_M0YjRh3gW9gVNp8LRgRZY7uUcWLmmwbUcHRIQbuA2zpJhiALJytbC3y1OKKm_15FAqDSDPZYYYLRG9eOY8C2ynQAtpRO76p2wG9U5J_b0FTigQN8KSzwa8E-LeupVF7T8Lzebf_R5RsW3TOh6CY1bUFNOnczN8iOldcFoDgK4qhrCOAznqEZHw" charset="UTF-8"></script></head>
 <body>
+    <!-- Navbar -->
     <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
         <img src="img/logo.png" alt="Logo" class="logo">
@@ -16,13 +18,16 @@
         <a href="index.html">destinations </a>
         <a href="index.html"> services</a>
         <a href="index.html"> gallery </a>
+        <a href="index.html"> reviews </a>
         </nav>
-        <a href="login.html" class="btn">Login</a>
+        <a id="login-btn1" href="login.html" class="btn">Login</a>
       </header>
-    <div class="background-image-contact"></div>
-    <div class="register-container">
-        <h2>Contact Us</h2>
-        <form id="loginForm" class="form-horizontal" action="index.html">
+      <!-- Background Image -->
+      <div class="background-image"></div>
+      <!-- Form -->    
+      <div class="contact-container">
+      <h2>Contact Us</h2>
+      <form id="contactForm" class="form-horizontal" action="index.html">
             <div class="form-group">
                 <label for="email">Name:</label>
                 <input type="text" name="text" placeholder="Name" required>
@@ -40,14 +45,44 @@
                 <textarea type="text" name="text" placeholder="Write here..." required style="height:200px"></textarea>
             </div>
             <br>
-
-<div class="button-container">
-    <button id="login-btn" type="submit">Send</button>
-</div>
+            <div class="button-container">
+                <button id="login-btn" type="submit">Send</button>
+            </div>
         </form>
-        <span class="close-btn" id="close-register-popup">&times;</span> 
+        <span class="close-btn" id="close-contact-popup">&times;</span> 
     </div>
 </div>
+<!-- Footer -->
+<section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <div class="share">
+          <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+          <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+          <a href="https://www.linkedin.com/" class="fab fa-linkedin"></a>
+        </div>
+      </div>
+      <div class="box">
+        <a href="index.html" class="links">Home</a>
+        <a href="index.html" class="links">About Us</a>
+        <a href="contactus.html" class="links">Contact Us</a>
+        <a href="index.html" class="links">Destinations</a>
+        <a href="index.html" class="links">Services</a>
+        <a href="index.html" class="links">Gallery</a>
+        <a href="index.html" class="links">Reviews</a>
+      </div>
+      <div class="box">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map"></i> Ariana, Tunisia</p>
+        <p><i class="fas fa-phone"></i> +216 22 222 222</p>
+        <p><i class="fas fa-envelope"></i> travels@gmail.com</p>
+        <p><i class="fas fa-clock"></i> 7:00am - 10:00pm</p>
+      </div>
+    </div>
+    <div class="credit">
+      Created by <span>Tesnime, Bochra and Saila</span> | All rights reserved!
+    </div>
+</section>
 <script src="script.js" defer></script>
 </body>
 </html>
