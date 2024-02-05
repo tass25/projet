@@ -264,7 +264,7 @@ body {
     left: 0;
     right: 0;
     background: var(--bg-color); /* Fond foncé */
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Forme initiale (cachée) */
+   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Forme initiale (cachée) */
   }
 
   /* Styles pour la barre de navigation active en mode mobile */
