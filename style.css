@@ -1,6 +1,13 @@
 /* Importation des polices Google Fonts Montserrat et Nunito */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@200;300;400;500;600&display=swap');
+/* Import Tailwind's base styles */
+@import 'tailwindcss/base';
 
+/* Import Tailwind's component styles */
+@import 'tailwindcss/components';
+
+/* Import Tailwind's utility styles */
+@import 'tailwindcss/utilities';
 /* Réinitialisation des styles par défaut pour tous les éléments HTML */
 * {
   font-family: 'Times New Roman', Times, serif; /* Définition de la police par défaut */
@@ -947,3 +954,7 @@ body {
 .footer .credit span {
   color: var(--blue); /* Couleur des noms */
 }
+
+
+
+

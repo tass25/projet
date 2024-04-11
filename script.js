@@ -32,3 +32,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         window.location.href = 'index.html'; // Redirige vers 'index.html' après la connexion
     });
 });
+
+
+
+
+
+
+
