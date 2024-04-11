@@ -622,7 +622,7 @@ textarea.input {
 #navigation {
   background: #FFF;
   border-bottom: 2px solid #E4E7ED;
-  border-top: 3px solid #D10024;
+  border-top: 3px solid #FFF;
 }
 
 /*----------------------------*\
@@ -638,7 +638,7 @@ textarea.input {
 }
 
 .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
-  color: #D10024;
+  color: #46e0ff;
   background-color: transparent;
 }
 
@@ -647,7 +647,7 @@ textarea.input {
   display: block;
   width: 0%;
   height: 2px;
-  background-color: #D10024;
+  background-color: #96bcff;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
