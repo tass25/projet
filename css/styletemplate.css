@@ -399,7 +399,7 @@ textarea.input {
 }
 
 #breadcrumb .breadcrumb-tree li a:hover {
-  color: #84f700;
+  color: #00e3f7;
 }
 
 /*=========================================================
@@ -1918,7 +1918,7 @@ textarea.input {
 
 #newsletter.section {
   border-top: 2px solid #E4E7ED;
-  border-bottom: 3px solid #D10024;
+  border-bottom: 3px solid #4bd5ff;
   margin-top: 30px;
 }
 
