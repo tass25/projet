@@ -203,20 +203,17 @@ if(isset($_GET['id_destination'])){
 								
 								
 							</div>
+							<form action="commander.php" method="POST">
 
 							<div class="add-to-cart">
 								<div class="qty-label">
-									NB
-									<div class="input-number">
-										<input type="number">
-										<span class="qty-up">+</span>
-										<span class="qty-down">-</span>
-									</div>
+   								 <input type="number" class="form-control" name="quantite" step="1" placeholder="nb personne ">
 								</div>
-								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+								<button class="add-to-cart-btn" type ="submit"><i class="fa fa-shopping-cart"></i> add to cart</button>
 							</div>
 
-						
+							</form>
+
 
 							<ul class="product-links">
 								<li>Share:</li>
