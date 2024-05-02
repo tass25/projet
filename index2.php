@@ -212,7 +212,7 @@ foreach ($produits as $produit) {
                 <i class="fa fa-star"></i>
             </div>
             <div class="product-btns">
-                <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+			<a href="product.php?id='.$produit['id_destination'].'" class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></a>
             </div>
         </div>
         <div class="add-to-cart">

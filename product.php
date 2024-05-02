@@ -1,17 +1,14 @@
 <?php
-  
- include "functions.php";
+include "functions.php";
+$produit = null;
+if(isset($_GET['id_destination'])){
+    $produit = getProduitById($_GET['id_destination']);
+}
 
-if(!empty($_POST)){
-	$produits=searchProduits($_POST['search']);
-
-}else { $produits=getAllProducts();}
-	
-
+?>
 
 
 
- ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -20,7 +17,7 @@ if(!empty($_POST)){
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title></title>
+		<title>Electro - HTML Ecommerce Template</title>
 
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -53,11 +50,11 @@ if(!empty($_POST)){
 		<!-- HEADER -->
 		<header>
 			<!-- TOP HEADER -->
-		
+
 			<!-- /TOP HEADER -->
 
 			<!-- MAIN HEADER -->
-			<div id="header"style="background-color: black;">
+			<div id="header" style="background-color: black;">
 				<!-- container -->
 				<div class="container">
 					<!-- row -->
@@ -73,9 +70,15 @@ if(!empty($_POST)){
 						<!-- /LOGO -->
 
 						<!-- SEARCH BAR -->
-					<?php
-					include "header.php";
-					?>
+						<div class="col-md-6">
+							<div class="header-search">
+								<form>
+								
+									<input class="input" placeholder="Search here">
+									<button class="search-btn">Search</button>
+								</form>
+							</div>
+						</div>
 						<!-- /SEARCH BAR -->
 
 						<!-- ACCOUNT -->
@@ -141,164 +144,164 @@ if(!empty($_POST)){
 		<!-- /HEADER -->
 
 		<!-- NAVIGATION -->
-	
+		<nav id="navigation"style="background-color: black;">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav"style="background-color: black;">
+					<!-- NAV -->
+					<ul class="main-nav nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Hot Deals</a></li>
+						<li><a href="#">Categories</a></li>
+						
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
 		<!-- /NAVIGATION -->
 
-		
+		<!-- BREADCRUMB -->
+	
 		<!-- /BREADCRUMB -->
 
 		<!-- SECTION -->
-		<div class="section" style="background-color: black;">
+		<div class="section"style="background-color: black;">
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
 				<div class="row">
-					<!-- ASIDE -->
-					<div id="aside" class="col-md-3">
-						<!-- aside Widget -->
-						<div class="aside">
-							<h3 class="aside-title">Location</h3>
-							<div class="checkbox-filter">
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-1">
-									<label for="category-1">
-										<span></span>
-										Bizerte
-									</label>
-								</div>
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-2">
-									<label for="category-2">
-										<span></span>
-										Nabeul
-									</label>
-								</div>
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-2">
-									<label for="category-2">
-										<span></span>
-										Beja
-									</label>
-								</div>
-
+					<!-- Product main img -->
+					<div class="col-md-5 col-md-push-2">
+						<div id="product-main-img">
+							<div class="product-preview">
+							<img src="img/<?php echo $produit['image']; ?>" alt="">
 							</div>
+
 						</div>
-						<!-- /aside Widget -->
+					</div>
+					<!-- /Product main img -->
 
-						<!-- aside Widget -->
-						<div class="aside">
-							<h3 class="aside-title">Price</h3>
-							<div class="price-filter">
-								<div id="price-slider"></div>
-								<div class="input-number price-min">
-									<input id="price-min" type="number">
-									<span class="qty-up">+</span>
-									<span class="qty-down">-</span>
-								</div>
-								<span>-</span>
-								<div class="input-number price-max">
-									<input id="price-max" type="number">
-									<span class="qty-up">+</span>
-									<span class="qty-down">-</span>
-								</div>
-							</div>
-						</div>
-						<!-- /aside Widget -->
-
-						<!-- aside Widget -->
-						
-							
-						<!-- /aside Widget -->
-
-						<!-- aside Widget -->
 					
-						<!-- /aside Widget -->
-					</div>
-					<!-- /ASIDE -->
-
-					<!-- STORE -->
-					<div id="store" class="col-md-9">
-						<!-- store top filter -->
-						<div class="store-filter clearfix">
-							<div class="store-sort">
-								<label>
-									Sort By:
-									<select class="input-select">
-										<option value="0">Popular</option>
-										<option value="1"></option>
-									</select>
-								</label>
-
-								<label>
-									Show:
-									<select class="input-select">
-										<option value="0">20</option>
-										<option value="1">50</option>
-									</select>
-								</label>
-							</div>
-							<ul class="store-grid">
-								<li class="active"><i class="fa fa-th"></i></li>
-							</ul>
-						</div>
-						<!-- /store top filter -->
-
-						<!-- store products -->
-<div class="row">
-    <?php
-    foreach ($produits as $produit) {
-    ?>
-    <div class="col-md-4 col-xs-6">
-        <div class="product">
-            <div class="product-img">
-			<img src="img/<?php echo $produit['image']; ?>" alt="">
-            </div>
-            <div class="product-body">
-                <h3 class="product-name"><a href="#"><?php echo $produit['name']; ?></a></h3>
-                <h4 class="product-price"><?php echo $produit['price']; ?></h4>
-                <div class="product-rating">
-                    <!-- Ratings can be added here -->
-                </div>
-                <div class="product-btns">
-                <a href="product.php?id_destination=<?php echo $produit['id_destination']; ?>" class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></a>
-                </div>
-            </div>
-            <div class="add-to-cart">
-                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-            </div>
-        </div>
-    </div>
-    <?php
-    }
-    ?>
-</div>
-<!-- /store products -->
-
+					<!-- Product details -->
+					<div class="col-md-10">
+						<div class="product-details">
+						<h3 class="product-name"><?php echo $produit['name']; ?></h3>
+							<div>
+								<div class="product-rating">
 								
+							
+							<div>
+								<h3 class="product-price"><?php echo $produit['price']; ?> TND</h3>
+							</div>
+							<p><?php echo $produit['city']; ?></p>
 
-							<div class="clearfix visible-lg visible-md"></div>
+							<div class="product-options">
+								
+								
+							</div>
+
+							<div class="add-to-cart">
+								<div class="qty-label">
+									NB
+									<div class="input-number">
+										<input type="number">
+										<span class="qty-up">+</span>
+										<span class="qty-down">-</span>
+									</div>
+								</div>
+								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+							</div>
 
 						
-						</div>
-						<!-- /store products -->
 
-						<!-- store bottom filter -->
-						<div class="store-filter clearfix">
-							<span class="store-qty">Showing 20-100 products</span>
-							<ul class="store-pagination">
-								<li class="active">1</li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+							<ul class="product-links">
+								<li>Share:</li>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i></a></li>
 							</ul>
+
 						</div>
-						<!-- /store bottom filter -->
 					</div>
-					<!-- /STORE -->
+					<!-- /Product details -->
+
+					<!-- Product tab -->
+					<div class="col-md-12">
+						<div id="product-tab">
+							<!-- product tab nav -->
+							<ul class="tab-nav">
+								<li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
+								<li><a data-toggle="tab" href="#tab3">Reviews </a></li>
+							</ul>
+							<!-- /product tab nav -->
+
+							<!-- product tab content -->
+							<div class="tab-content">
+								<!-- tab1  -->
+								<div id="tab1" class="tab-pane fade in active">
+									<div class="row">
+										<div class="col-md-12">
+											<p><?php echo $produit['description']; ?></p>
+										</div>
+									</div>
+								</div>
+								<!-- /tab1  -->
+
+							
+
+								<!-- tab3  -->
+								<div id="tab3" class="tab-pane fade in">
+									<div class="row">
+										
+
+										<!-- Reviews -->
+										<div class="col-md-6">
+											<div id="reviews">
+												<ul class="reviews">
+													<li>
+														<div class="review-heading">
+															<h5 class="name">John</h5>
+						
+														</div>
+														<div class="review-body">
+														<p>get the review </p>
+														</div>
+													</li>
+													
+												</ul>
+												
+											</div>
+										</div>
+										<!-- /Reviews -->
+
+										<!-- Review Form -->
+										<div class="col-md-3">
+											<div id="review-form">
+												<form class="review-form">
+													<input class="input" type="text" placeholder="Your Name">
+													<input class="input" type="email" placeholder="Your Email">
+													<textarea class="input" placeholder="Your Review"></textarea>
+													<div class="input-rating">
+													
+													</div>
+													<button class="primary-btn">Submit</button>
+												</form>
+											</div>
+										</div>
+										<!-- /Review Form -->
+									</div>
+								</div>
+								<!-- /tab3  -->
+							</div>
+							<!-- /product tab content  -->
+						</div>
+					</div>
+					<!-- /product tab -->
 				</div>
 				<!-- /row -->
 			</div>
@@ -306,8 +309,59 @@ if(!empty($_POST)){
 		</div>
 		<!-- /SECTION -->
 
+		<!-- Section -->
+		<div class="section"style="background-color: black;">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-md-12">
+						<div class="section-title text-center">
+							<h3 class="title"> You May Like </h3>
+						</div>
+					</div>
+
+					
+
+			
+
+					<div class="clearfix visible-sm visible-xs"></div>
+
+					<!-- product -->
+					<div class="col-md-3 col-xs-6">
+						<div class="product">
+							<div class="product-img">
+								<img src="./img/upc.jpg" alt="">
+							</div>
+							<div class="product-body">
+								<h3 class="product-name"><a href="#">name</a></h3>
+								<h4 class="product-price">980.00 </h4>
+								<div class="product-rating">
+									
+								</div>
+								<div class="product-btns">
+									<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+								</div>
+							</div>
+							<div class="add-to-cart">
+								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+							</div>
+						</div>
+					</div>
+					<!-- /product -->
+
+				
+
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /Section -->
+
 		<!-- NEWSLETTER -->
-	
+		
 		<!-- /NEWSLETTER -->
 
 		<!-- FOOTER -->
@@ -330,6 +384,7 @@ if(!empty($_POST)){
 							</div>
 						</div>
 
+					
 
 						<div class="clearfix visible-xs"></div>
 
@@ -349,8 +404,8 @@ if(!empty($_POST)){
 							<div class="footer">
 								<h3 class="footer-title">Service</h3>
 								<ul class="footer-links">
-									<li><a href="#">My Account</a></li>
 									<li><a href="#">View Cart</a></li>
+									
 								</ul>
 							</div>
 						</div>
@@ -362,7 +417,7 @@ if(!empty($_POST)){
 			<!-- /top footer -->
 
 			<!-- bottom footer -->
-			<div id="bottom-footer" class="section" style="background-color: black;">
+			<div id="bottom-footer" class="section"style="background-color: black;">
 				<div class="container">
 					<!-- row -->
 					<div class="row">
@@ -377,7 +432,7 @@ if(!empty($_POST)){
 							</ul>
 							<span class="copyright">
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by TEBOSA
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Tebosa
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							</span>
 						</div>

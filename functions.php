@@ -2,18 +2,8 @@
 
 function getAllProducts(){
     
-$DBuser = "root";
-$DBpassword = "";
-$DBname = "camp";
-$servername = "localhost";
+    $conn=connect();
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$DBname", $DBuser, $DBpassword);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
 
 $requete="Select * from destination";
 $resultat = $conn->query($requete);
@@ -28,6 +18,18 @@ return $produits;
 
 function searchProduits($keywords){
 
+    $conn=connect();
+    
+
+
+    $requete = "SELECT * FROM destination WHERE name LIKE '%$keywords%'";    $resultat = $conn->query($requete);
+    $produits =$resultat ->fetchAll();
+    return $produits;
+
+
+}
+
+function connect(){
     $DBuser = "root";
     $DBpassword = "";
     $DBname = "camp";
@@ -42,20 +44,17 @@ function searchProduits($keywords){
     }
 
 
-    $requete = "SELECT * FROM destination WHERE name LIKE '%$keywords%'";    $resultat = $conn->query($requete);
-    $produits =$resultat ->fetchAll();
-    return $produits;
-    
-
-
-
-
+return $conn;
 
 }
 
-
-
-
+function getProduitById($id_destination){
+    $conn =connect();
+    $requete = "SELECT * FROM destination WHERE id_destination = $id_destination";
+    $resultat = $conn->query($requete);
+    $produit = $resultat->fetch();
+    return $produit;
+}
 
 
 ?>
