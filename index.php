@@ -14,7 +14,7 @@
   <nav class="navbar">
   <a href="#home"> home</a>
   <a href="#about"> about us</a>
-  <a href="contactus.html"> contact us</a>
+  <a href="contactus.php"> contact us</a>
   <a href="#destination">destinations </a>
   <a href="#services"> services</a>
   <a href="#gallery"> gallery </a>
@@ -295,7 +295,7 @@
     <div class="box">
       <a href="#home" class="links">Home</a>
       <a href="#about" class="links">About Us</a>
-      <a href="contactus.html" class="links">Contact Us</a>
+      <a href="contactus.php" class="links">Contact Us</a>
       <a href="#destination" class="links">Destinations</a>
       <a href="#services" class="links">Services</a>
       <a href="#gallery" class="links">Gallery</a>

@@ -207,7 +207,7 @@ if(isset($_GET['id_destination'])){
 
 							<div class="add-to-cart">
 								<div class="qty-label">
-   								 <input type="number" class="form-control" name="quantite" step="1" placeholder="nb personne ">
+   								 <input type="number" class="form-control" name="quantite" step="1" placeholder="nb personne " required>
 								</div>
 								<button class="add-to-cart-btn" type ="submit"><i class="fa fa-shopping-cart"></i> add to cart</button>
 							</div>

@@ -14,7 +14,7 @@
         <nav class="navbar">
         <a href="index.html"> home</a>
         <a href="index.html"> about us</a>
-        <a href="contactus.html"> contact us</a>
+        <a href="contactus.php"> contact us</a>
         <a href="index.html">destinations </a>
         <a href="index.html"> services</a>
         <a href="index.html"> gallery </a>
@@ -30,7 +30,7 @@
       <form id="contactForm" class="form-horizontal" action="complaint.php" method="POST">
             <div class="form-group">
                 <label for="email">Name:</label>
-                <input type="text" name="text" placeholder="Name" required>
+                <input type="text" name="name" placeholder="Name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
@@ -38,11 +38,11 @@
             </div>
             <div class="form-group">
                 <label for="obj">Object:</label>
-                <input type="text" name="text" placeholder="Object" required>
+                <input type="text" name="object" placeholder="Object" required>
             </div>
             <div class="form-group">
                 <label for="msg">Message:</label>
-                <textarea type="text" name="text" placeholder="Write here..." required style="height:200px"></textarea>
+                <textarea type="text" name="message" placeholder="Write here..." required style="height:200px"></textarea>
             </div>
             <br>
             <div class="button-container">
@@ -65,7 +65,7 @@
       <div class="box">
         <a href="index.html" class="links">Home</a>
         <a href="index.html" class="links">About Us</a>
-        <a href="contactus.html" class="links">Contact Us</a>
+        <a href="contactus.php" class="links">Contact Us</a>
         <a href="index.html" class="links">Destinations</a>
         <a href="index.html" class="links">Services</a>
         <a href="index.html" class="links">Gallery</a>

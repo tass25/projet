@@ -29,14 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($sql) === TRUE) {
             echo '<script>alert("Error submitting review. Please try again later.");</script>';
 
-            header("Location: contactus.html");
+            header("Location:contactus.php");
         } 
        
 
         // Close the connection
         $conn->close();
     } else {
-        header("Location: contactus.html");
+        header("Location:contactus.php");
     }
 }
 ?>
