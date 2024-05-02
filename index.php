@@ -221,46 +221,66 @@
 </section>
 <!-- Section Reviews -->
 <section class="review" id="review">
-  <div class="content">
-      <span>Testimonials</span>
-      <h3>Good News from Our Clients</h3>
-      <p>
-        Our clients from diverse backgrounds often take the time to share their experiences and their opinions, 
-        providing positive feedback about our services. 
-      </p>
-  </div>
-  <div class="box-container">
-      <div class="box">
-          <p>Good work everyone, i had an enjoyable time.</p>
-          <div class="user">
-              <img src="img/emoji1.jpg" alt="User Photo">
-              <div class="info">
-                  <h3>John Deo</h3>
-                  <span>Designer</span>
-              </div>
-          </div>
-      </div>
-      <div class="box">
-          <p>I highly recommend joining this group!</p>
-          <div class="user">
-              <img src="img/emoji2.jpg" alt="User Photo">
-              <div class="info">
-                  <h3>Jane Doe</h3>
-                  <span>Architect</span>
-              </div>
-          </div>
-      </div>
-      <div class="box">
-          <p>I was completely impressed with their professionalism and customer service.</p>
-          <div class="user">
-              <img src="img/emoji3.jpg" alt="User Photo">
-              <div class="info">
-                  <h3>Alex Smith</h3>
-                  <span>Engineer</span>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="content">
+        <span>Testimonials</span>
+        <h3>Good News from Our Clients</h3>
+        <p>
+            Our clients from diverse backgrounds often take the time to share their experiences and their opinions,
+            providing positive feedback about our services.
+        </p>
+    </div>
+    <div class="box-container">
+      <?php
+      // Database credentials
+      $servername = 'localhost'; // Your database server name or IP address
+      $username = 'root'; // Your database username
+      $password = ''; // Your database password
+      $dbname = 'camp'; // Your database name
+
+      // Create a connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+
+      // Check the connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+
+      // Fetch the last three reviews from the database
+      $sql = "SELECT message FROM review ORDER BY id_review DESC LIMIT 3";
+      $result = $conn->query($sql);
+
+      // Check if there are reviews
+      
+      if ($result->num_rows > 0) {
+          // Output each review as a box in the HTML section
+          while ($row = $result->fetch_assoc()) {
+              echo '<div class="box">';
+              echo '<p>' . $row["message"] . '</p>';
+              echo '<div class="user">';
+              echo '<img src="img/emoji2.jpg" alt="User Photo">';
+              echo '<div class="info">';
+              echo '<h3>User Feedback</h3>'; // You can replace this with the actual user's name from your database if available
+              echo '<span>Client</span>'; // You can replace this with the actual user's role from your database if available
+              echo '</div>';
+              echo '</div>';
+              echo '</div>';
+          }
+      } else {
+          echo "No reviews found.";
+      }
+
+      // Close the connection
+      $conn->close();
+      ?>
+        <!-- New review input box -->
+        <div class="box review-box">
+            <form id="review-form" action="review.php" method="POST">
+                <textarea id="user-review" name="user_review" placeholder="Write your review here..."
+                          style="height: 150px; width: 200px"></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
 </section>
 <!-- Footer -->
 <section class="footer">

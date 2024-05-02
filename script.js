@@ -17,24 +17,6 @@ document.querySelectorAll('.about .video-container .controls .control-btn').forE
 
 // ****************LOGIN & REGISTER****************
 
-// Redirection après soumission du formulaire d'inscription
-document.addEventListener('DOMContentLoaded', (event) => {
-    document.getElementById('registerForm').addEventListener('submit', function(e) {
-        e.preventDefault(); 
-        window.location.href = 'index.html'; // Redirige vers 'index.html' après l'inscription
-    });
-});
-
-// Redirection après soumission du formulaire de connexion
-document.addEventListener('DOMContentLoaded', (event) => {
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-        e.preventDefault(); 
-        window.location.href = 'index.html'; // Redirige vers 'index.html' après la connexion
-    });
-});
-
-
-
 
 
 
