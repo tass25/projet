@@ -233,7 +233,6 @@ if(isset($_GET['id_destination'])){
 							<!-- product tab nav -->
 							<ul class="tab-nav">
 								<li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
-								<li><a data-toggle="tab" href="#tab3">Reviews </a></li>
 							</ul>
 							<!-- /product tab nav -->
 
@@ -257,39 +256,11 @@ if(isset($_GET['id_destination'])){
 										
 
 										<!-- Reviews -->
-										<div class="col-md-6">
-											<div id="reviews">
-												<ul class="reviews">
-													<li>
-														<div class="review-heading">
-															<h5 class="name">John</h5>
-						
-														</div>
-														<div class="review-body">
-														<p>get the review </p>
-														</div>
-													</li>
-													
-												</ul>
-												
-											</div>
-										</div>
+									
 										<!-- /Reviews -->
 
 										<!-- Review Form -->
-										<div class="col-md-3">
-											<div id="review-form">
-												<form class="review-form">
-													<input class="input" type="text" placeholder="Your Name">
-													<input class="input" type="email" placeholder="Your Email">
-													<textarea class="input" placeholder="Your Review"></textarea>
-													<div class="input-rating">
-													
-													</div>
-													<button class="primary-btn">Submit</button>
-												</form>
-											</div>
-										</div>
+										
 										<!-- /Review Form -->
 									</div>
 								</div>
