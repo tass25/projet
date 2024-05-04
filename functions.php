@@ -59,7 +59,7 @@ function getProduitById($id_destination){
 function connectVisiteur($data){
    $conn =connect();
    $email=$data['email'];
-   $password=$data['password'];
+   $password=md5($data['password']);
    $requete="Select * from user where email='$email' AND password='$password' ";
 
 $resultat=$conn->query($requete);

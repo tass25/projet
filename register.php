@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error: Passwords do not match";
         exit();
     }
+    $hashedPassword = md5($password);
 
     // Database connection parameters
     $servername = "localhost";
@@ -35,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $conn->prepare("INSERT INTO user (first_name, last_name, birth_date, phone_number, email, password) VALUES (?, ?, ?, ?, ?, ?)");
 
     // Bind parameters and execute the statement
-    $stmt->bind_param("ssssss", $firstName, $lastName, $birthDate, $phone, $email, $password);
+    $stmt->bind_param("ssssss", $firstName, $lastName, $birthDate, $phone, $email, $hashedPassword );
 
     // Execute the statement
     if ($stmt->execute()) {

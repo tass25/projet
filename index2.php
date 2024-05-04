@@ -5,7 +5,7 @@
 
 	 $produits=getAllProducts();
 
-
+session_start();
 
 
  ?>
@@ -159,7 +159,7 @@
 										Bizerte
 									</label>
 								</div>
-
+<h1><?php echo $_SESSION['sessionlogin']." ".$_SESSION["sessionpassword"];  ?></h1>
 								<div class="input-checkbox">
 									<input type="checkbox" id="category-2">
 									<label for="category-2">
