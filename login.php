@@ -20,11 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+    $hashedPassword = md5($password);
 
     // SQL query with prepared statement
     $sql = "SELECT * FROM user WHERE email=? AND password=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $email, $password);
+    $stmt->bind_param("ss", $email, $hashedPassword );
 
     // Execute the statement
     $stmt->execute();
@@ -34,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows == 1) {
         $_SESSION["sessionlogin"] = $email;
-        $_SESSION["sessionpassword"] = $password;
+        $_SESSION["sessionpassword"] = $hashedPassword ;
         header("Location: index2.php");
         //nlanci une session , save mdp + username 
         //session start , 2 variables , $sessionlogin , $sessionpassword 
