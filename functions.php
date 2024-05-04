@@ -56,5 +56,18 @@ function getProduitById($id_destination){
     return $produit;
 }
 
+function connectVisiteur($data){
+   $conn =connect();
+   $email=$data['email'];
+   $password=$data['password'];
+   $requete="Select * from user where email='$email' AND password='$password' ";
+
+$resultat=$conn->query($requete);
+$user=$resultat->fetch();
+return $user;
+
+}
+
+
 
 ?>

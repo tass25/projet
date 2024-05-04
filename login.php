@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Retrieve form data
@@ -31,7 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $stmt->get_result();
 
     if ($result->num_rows == 1) {
-        header("Location: index.php");
+        $_SESSION["sessionlogin"] = $email;
+        $_SESSION["sessionpassword"] = $password;
+        header("Location: index2.php");
         //nlanci une session , save mdp + username 
         //session start , 2 variables , $sessionlogin , $sessionpassword 
         exit();
