@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Database credentials
         $servername = 'localhost'; // Your database server name or IP address
         $username = 'root'; // Your database username
-        $password = ''; // Your database password
+        $password = '0000'; // Your database password
         $dbname = 'camp'; // Your database name
 
         // Create a connection
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-
+        $userId = 0;
         // Prepare the SQL statement to insert the review into the database
         $review = $_POST["user_review"];
         $sql = "INSERT INTO review (message) VALUES ('$review')";

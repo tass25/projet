@@ -12,13 +12,13 @@
         <div id="menu-btn" class="fas fa-bars"></div>
         <img src="img/logo.png" alt="Logo" class="logo">
         <nav class="navbar">
-        <a href="index.html"> home</a>
-        <a href="index.html"> about us</a>
+        <a href="index.php"> home</a>
+        <a href="index.php"> about us</a>
         <a href="contactus.php"> contact us</a>
-        <a href="index.html">destinations </a>
-        <a href="index.html"> services</a>
-        <a href="index.html"> gallery </a>
-        <a href="index.html"> reviews </a>
+        <a href="index.php">destinations </a>
+        <a href="index.php"> services</a>
+        <a href="index.php"> gallery </a>
+        <a href="index.php"> reviews </a>
         </nav>
         <a id="login-btn1" href="login.html" class="btn">Login</a>
       </header>
@@ -63,13 +63,13 @@
         </div>
       </div>
       <div class="box">
-        <a href="index.html" class="links">Home</a>
-        <a href="index.html" class="links">About Us</a>
+        <a href="index.php" class="links">Home</a>
+        <a href="index.php" class="links">About Us</a>
         <a href="contactus.php" class="links">Contact Us</a>
-        <a href="index.html" class="links">Destinations</a>
-        <a href="index.html" class="links">Services</a>
-        <a href="index.html" class="links">Gallery</a>
-        <a href="index.html" class="links">Reviews</a>
+        <a href="index.php" class="links">Destinations</a>
+        <a href="index.php" class="links">Services</a>
+        <a href="index.php" class="links">Gallery</a>
+        <a href="index.php" class="links">Reviews</a>
       </div>
       <div class="box">
         <h3>Contact Info</h3>

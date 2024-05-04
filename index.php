@@ -28,7 +28,7 @@
   <span>follow us</span>
   <h3>to the unknown</h3>
   <p>Journey beyond the horizon, where dreams set sail and adventures await.</p>
-  <a href="lfeatures.html" class="btn">book now</a>
+  <a href="store.php" class="btn">book now</a>
   </div>
 </section>
 <!-- Section Booking -->
@@ -234,7 +234,7 @@
       // Database credentials
       $servername = 'localhost'; // Your database server name or IP address
       $username = 'root'; // Your database username
-      $password = ''; // Your database password
+      $password = '0000'; // Your database password
       $dbname = 'camp'; // Your database name
 
       // Create a connection

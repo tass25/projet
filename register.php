@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection parameters
     $servername = "localhost";
     $username = "root";
-    $dbpassword = ""; // Rename this variable to avoid conflict with the input password
+    $dbpassword = "0000"; // Rename this variable to avoid conflict with the input password
     $dbname = "camp";
 
     // Create connection
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute the statement
     if ($stmt->execute()) {
-        header("Location: index.html");
+        header("Location: index.php");
     } else {
         header("Location: register.html");
     }

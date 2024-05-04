@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Establish connection to MySQL database
     $servername = "localhost";
     $username = "root";
-    $db_password = ""; // Rename this variable to avoid conflict with the input password
+    $db_password = "0000"; // Rename this variable to avoid conflict with the input password
     $dbname = "camp";
 
     // Create connection
@@ -31,7 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $stmt->get_result();
 
     if ($result->num_rows == 1) {
-        header("Location: index.html");
+        header("Location: index.php");
+        //nlanci une session , save mdp + username 
+        //session start , 2 variables , $sessionlogin , $sessionpassword 
         exit();
     } else {
         header("Location: login.html");

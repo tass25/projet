@@ -31,7 +31,7 @@ function searchProduits($keywords){
 
 function connect(){
     $DBuser = "root";
-    $DBpassword = "";
+    $DBpassword = "0000";
     $DBname = "camp";
     $servername = "localhost";
     
