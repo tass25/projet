@@ -145,143 +145,133 @@ session_start();
 			<div class="container ">
 				<!-- row -->
 				<div class="row">
-					<!-- ASIDE -->
-					<div id="aside" class="col-md-3">
-						<!-- aside Widget -->
-						<div class="aside">
-							<h3 class="aside-title">Location</h3>
-							<div class="checkbox-filter">
+				<div class="container">
+    <div class="row">
+        <!-- Aside section with filter checkboxes -->
+        <div id="aside" class="col-md-3">
+            <div class="aside">
+                <h3 class="aside-title">Location</h3>
+                <div class="checkbox-filter">
+                    <div class="input-checkbox">
+                        <input type="checkbox" id="category-1">
+                        <label for="category-1">
+                            <span></span>
+                            Bizerte
+                        </label>
+                    </div>
 
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-1">
-									<label for="category-1">
-										<span></span>
-										Bizerte
-									</label>
-								</div>
-<h1><?php echo $_SESSION['sessionlogin']." ".$_SESSION["sessionpassword"];  ?></h1>
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-2">
-									<label for="category-2">
-										<span></span>
-										Nabeul
-									</label>
-								</div>
+                    <div class="input-checkbox">
+                        <input type="checkbox" id="category-2">
+                        <label for="category-2">
+                            <span></span>
+                            Nabeul
+                        </label>
+                    </div>
 
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-2">
-									<label for="category-2">
-										<span></span>
-										Beja
-									</label>
-								</div>
+                    <div class="input-checkbox">
+                        <input type="checkbox" id="category-3">
+                        <label for="category-3">
+                            <span></span>
+                            Beja
+                        </label>
+                    </div>
+                </div>
+            </div>
 
-							</div>
-						</div>
-						<!-- /aside Widget -->
-
-						<!-- aside Widget -->
-						<div class="aside">
-							<h3 class="aside-title">Price</h3>
-							<div class="price-filter">
-								<div id="price-slider"></div>
-								<div class="input-number price-min">
-									<input id="price-min" type="number">
-									<span class="qty-up">+</span>
-									<span class="qty-down">-</span>
-								</div>
-								<span>-</span>
-								<div class="input-number price-max">
-									<input id="price-max" type="number">
-									<span class="qty-up">+</span>
-									<span class="qty-down">-</span>
-								</div>
-							</div>
-						</div>
-					
-					</div>
-					
-		<!-- NAVIGATION -->
-		<nav id="navigation" style="background-color: black;">
-			<!-- container -->
-			<div class="container">
-				<!-- responsive-nav -->
-				<div id="responsive-nav">
-					<!-- NAV -->
-					<ul class="main-nav nav navbar-nav" >
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Black Friday</a></li>
-						<li><a href="#">Top Events</a></li>
-						<li><a href="#">View All</a></li>
-
-					</ul>
-					<!-- /NAV -->
-				</div>
-				<!-- /responsive-nav -->
-			</div>
-			<!-- /container -->
-		</nav>
-		<!-- /NAVIGATION -->
-
-		<!-- SECTION -->
-		<div class="section" style="background-color: black;">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-
-					<!-- section title -->
-					<div class="col-md-12">
-						<div class="section-title">
-							<h3 class="title">Black Friday</h3>
-							<div class="section-nav">
-								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab1">view all</a></li>
-								
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- /section title -->
-
-					<!-- Products tab & slick -->
-					<div class="col-md-12">
-						<div class="row">
-							<div class="products-tabs">
-								<!-- tab -->
-								<div id="tab1" class="tab-pane active">
-									<div class="products-slick" data-nav="#slick-nav-1">
-										<!-- product -->
-
-										<?php
-foreach ($produits as $produit) {
-    print '
-    <div class="product">
-        <div class="product-img">
-            <img src="./img/b.jpg">
-            <div class="product-label">
+            <div class="aside">
+                <h3 class="aside-title">Price</h3>
+                <div class="price-filter">
+                    <div id="price-slider"></div>
+                    <div class="input-number price-min">
+                        <input id="price-min" type="number">
+                        <span class="qty-up">+</span>
+                        <span class="qty-down">-</span>
+                    </div>
+                    <span>-</span>
+                    <div class="input-number price-max">
+                        <input id="price-max" type="number">
+                        <span class="qty-up">+</span>
+                        <span class="qty-down">-</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="product-body">
-            <h3 class="product-name"><a href="#">'.$produit['name'].'</a></h3>
-            <h4 class="product-price">'.$produit['price'].'</h4>
-            <div class="product-rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
+        <!-- /Aside section -->
+
+        <!-- Main content -->
+        <div class="col-md-9">
+            <!-- NAVIGATION -->
+            <nav id="navigation" class="navbar" style="background-color: black;">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Black Friday</a></li>
+                        <li><a href="#">Top Events</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /NAVIGATION -->
+
+            <!-- SECTION -->
+            <div class="section" style="background-color: black;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title">
+                                <h3 class="title">Black Friday</h3>
+                                <div class="section-nav">
+                                    <ul class="section-tab-nav tab-nav">
+                                        <li class="active"><a data-toggle="tab" href="#tab1">view all</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div id="tab1" class="tab-pane active">
+                                <div class="products-slick" data-nav="#slick-nav-1">
+                                    <!-- PHP products loop code here -->
+                                    <?php
+                                    foreach ($produits as $produit) {
+                                        print '
+                                        <div class="product">
+                                            <div class="product-img">
+                                                <img src="./img/b.jpg">
+                                                <div class="product-label"></div>
+                                            </div>
+                                            <div class="product-body">
+                                                <h3 class="product-name"><a href="#">'.$produit['name'].'</a></h3>
+                                                <h4 class="product-price">'.$produit['price'].'</h4>
+                                                <div class="product-rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="product-btns">
+                                                    <a href="product.php?id='.$produit['id_destination'].'" class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                            </div>
+                                        </div>';
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="product-btns">
-			<a href="product.php?id='.$produit['id_destination'].'" class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></a>
-            </div>
+            <!-- /SECTION -->
         </div>
-        <div class="add-to-cart">
-            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-        </div>
-    </div> ';
-}
-?>
+        <!-- /Main content -->
+    </div>
+</div>
+
 
 
 										<!-- product -->
